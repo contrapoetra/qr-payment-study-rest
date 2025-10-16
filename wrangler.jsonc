@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "qr-payment-study-rest",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "DBD1Database",
+          "database_id": "b346f43e-17e2-4236-9abf-7fd833a2ef9e"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "9530d8ab33954b9c8d77382221a3f157",
+            "binding": "SECRET",
+            "secret_name": "SECRET"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
